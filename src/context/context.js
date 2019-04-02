@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { products } from '../data';
+import { products } from '../data/data';
 
 
 const ProductContext = React.createContext();
@@ -20,6 +20,4 @@ class ProductProvider extends Component {
   }
 }
 
-const ProductConsumer = ProductContext.Consumer;
-
-export { ProductProvider, ProductConsumer};
+export { ProductProvider, ProductContext};

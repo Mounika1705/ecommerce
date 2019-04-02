@@ -16,7 +16,7 @@ export default class Footer extends Component {
             </p>
             <Iconholder>
               <i className="fa fa-map-marker"></i>
-              445 Mount Eden Road, 
+              445 Mount Eden Road,
               <span>Mount Eden, Auckland.</span>
             </Iconholder>
             <Iconholder>
@@ -32,23 +32,23 @@ export default class Footer extends Component {
             <Heading>Information</Heading>
             <List>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">About Us</Link>
               </li>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">Contact Us</Link>
               </li>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">Short Codes</Link>
               </li>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">FAQ's</Link>
               </li>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">Special Products</Link>
               </li>
             </List>
@@ -57,23 +57,23 @@ export default class Footer extends Component {
             <Heading>Category</Heading>
             <List>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">Mobiles</Link>
               </li>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">Tablets</Link>
               </li>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">Laptops</Link>
               </li>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">Wearables</Link>
               </li>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">Printers</Link>
               </li>
             </List>
@@ -82,21 +82,21 @@ export default class Footer extends Component {
             <Heading>Profile</Heading>
             <List>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <i className="fa fa-arrow-right"/>
+                <i className="fa fa-arrow-right" />
                 <Link to="/">Today's Deals</Link>
               </li>
             </List>
             <SocialIcons>
               <h4>Follow Us</h4>
               <span>
-              <Link to="/"><i className="fa fa-facebook"/></Link>
-              <Link to="/"><i className="fa fa-twitter"/></Link>
-              <Link to="/"><i className="fa fa-google-plus"/></Link>
-              <Link to="/"><i className="fa fa-instagram"/></Link>
+                <Link to="/"><i className="fa fa-facebook" /></Link>
+                <Link to="/"><i className="fa fa-twitter" /></Link>
+                <Link to="/"><i className="fa fa-google-plus" /></Link>
+                <Link to="/"><i className="fa fa-instagram" /></Link>
               </span>
             </SocialIcons>
           </div>

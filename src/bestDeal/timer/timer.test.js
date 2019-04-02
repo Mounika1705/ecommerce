@@ -1,14 +1,14 @@
 import React from 'react';
-import Footer from './footer';
+import Timer from './timer';
 import { shallow } from '../enzyme';
 
 
 let component;
-describe('<Footer/>', () => {
+describe('<Timer/>', () => {
   beforeAll(() => {
-    component = shallow(<Footer/>); 
+    component = shallow(<Timer/>); 
   });
-  it('render Footer Component correctly', () => {
+  it('render Timer Component correctly', () => {
     expect(component.exists()).toBe(true);
   });
 });

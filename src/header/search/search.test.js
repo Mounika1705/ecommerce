@@ -1,29 +1,23 @@
 import React from 'react';
 import Search from './search';
-import Enzyme, { mount, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import { MemoryRouter as Router } from 'react-router';
+import { shallow } from '../../enzyme';
 
-Enzyme.configure({ adapter: new Adapter() });
 
+let component;
 describe('<Search/>', () => {
+  beforeAll(() => {
+    component = shallow(<Search />);
+  });
   it('render Search container correctly', () => {
-    const SearchContainer = shallow(<Router><Search/></Router>);
-    expect(SearchContainer.exists()).toBe(true);
+    expect(component.exists()).toBe(true);
   });
   it('check Search container profile link', () => {
-    const SearchContainer = mount(<Router><Search/></Router>);
-    expect(SearchContainer.find('Link').at(0).prop('to')).toBe('/profile');
-    SearchContainer.unmount();
+    expect(component.find('Link').at(0).prop('to')).toBe('/profile');
   });
   it('check Search container cart link', () => {
-    const SearchContainer = mount(<Router><Search/></Router>);
-    expect(SearchContainer.find('Link').at(1).prop('to')).toBe('/cart');
-    SearchContainer.unmount();
+    expect(component.find('Link').at(1).prop('to')).toBe('/cart');
   });
   it('check Search Container search input box', () => {
-    const SearchContainer = mount(<Router><Search/></Router>);
-    expect(SearchContainer.find("input[type='search']")).toHaveLength(1);
-    SearchContainer.unmount();
+    expect(component.find("input[type='search']")).toHaveLength(1);
   });
 });

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Tab from './tab';
+import Tab from './Tab/tab';
 import styled from 'styled-components';
-import BestDeal from './bestDeal';
+import BestDeal from '../bestDeal/bestDeal';
+import LatestProducts from './latestProducts/latestProducts';
 
 
 export default class Home extends Component {
@@ -15,12 +16,10 @@ export default class Home extends Component {
        {id: 5, type: 'printers', active: false}]
     }
   }
-
   imageStyle = {
     width: '100%',
     height: '400px'
   }
- 
   handleOnClick = (value) => {
     const newTabs = [];
     this.state.tabs.forEach(obj => {
@@ -35,7 +34,6 @@ export default class Home extends Component {
     this.setState({
       tabs : [...newTabs]
     });
-    console.log(this.state.tabs);
   }
   render() {
     return (
@@ -76,6 +74,35 @@ export default class Home extends Component {
       <div className="container-fluid">
         <BestDeal/>
       </div>
+      <div className="container mt-5">
+        <div className="row">
+           <div className="col-12 text-center">
+           <h2 className="text-uppercase title-font text-danger">New Products</h2> 
+           </div>
+        </div>
+        <LatestProducts/>
+      </div>
+      <div className="container p-0">
+        <div className="row mt-5 ">
+          <div className="col-12 text-center">
+            <h2 className="title-font text-info text-uppercase">Brands</h2>
+          </div>
+        </div>
+        <div className="row mb-5">
+          <div className="col-lg-3 col-md-12 col-sm-12">
+            <Img src="img/brands/samsung.jpg" alt="samsung brand"/>
+          </div>
+          <div className="col-lg-3 col-md-12 col-sm-12">
+            <Img src="img/brands/canon.jpg" alt="canon brand"/>
+          </div>
+          <div className="col-lg-3 col-md-12 col-sm-12">
+             <Img src="img/brands/hp.jpg" alt="hp brand"/>
+          </div>
+          <div className="col-lg-3 col-md-12 col-sm-12">
+            <Img src="img/brands/panasonic.jpg" alt="panasonic brand"/>
+          </div>
+        </div>
+      </div>
       </React.Fragment>
     );
   }
@@ -104,5 +131,18 @@ const Tabs = styled.ul`
    border-bottom: 1px solid var(--mainred);
    @media only screen and (max-width: 600px) {
      flex-direction: column;
+     li {
+       background: indianred;
+       .nav-link {
+         color: #fff;
+       }
+     }
    }
+`
+
+const Img = styled.img`
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
 `

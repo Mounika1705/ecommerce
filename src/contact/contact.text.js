@@ -1,14 +1,14 @@
 import React from 'react';
-import Footer from './footer';
+import Contact from './contact';
 import { shallow } from '../enzyme';
 
 
 let component;
-describe('<Footer/>', () => {
+describe('<Contact/>', () => {
   beforeAll(() => {
-    component = shallow(<Footer/>); 
+    component = shallow(<Contact/>); 
   });
-  it('render Footer Component correctly', () => {
+  it('render Correct Component correctly', () => {
     expect(component.exists()).toBe(true);
   });
 });

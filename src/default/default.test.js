@@ -1,14 +1,14 @@
 import React from 'react';
-import Footer from './footer';
+import Default from './default';
 import { shallow } from '../enzyme';
 
 
 let component;
-describe('<Footer/>', () => {
+describe('<Default/>', () => {
   beforeAll(() => {
-    component = shallow(<Footer/>); 
+    component = shallow(<Default/>); 
   });
-  it('render Footer Component correctly', () => {
+  it('render BestDeal Component correctly', () => {
     expect(component.exists()).toBe(true);
   });
 });

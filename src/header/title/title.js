@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export default class Title extends Component {
-  render() {
-    return (
-      <div className="col-8 text-left">
-        <TitleContainer>
-          <h1 className="m-0">
-            <Link to="/" className="title">
-              The Store
-              <span>Best Choice</span>
-            </Link>
-          </h1>
-        </TitleContainer>
-      </div>
-    )
-  }
+
+export default () => {
+  return (
+    <div className="col-8 text-left">
+      <TitleContainer>
+        <h1 className="m-0">
+          <Link to="/" className="title">
+            The Store
+            <span>Best Choice</span>
+          </Link>
+        </h1>
+      </TitleContainer>
+    </div>
+  )
 }
 
 const TitleContainer = styled.div`
@@ -38,4 +37,4 @@ const TitleContainer = styled.div`
         font-size: 2rem;
     }
   }
-  `
+`
