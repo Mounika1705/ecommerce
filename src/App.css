@@ -16,3 +16,9 @@
 .title-font {
   font-family:  'Glegoo', serif;
 }
+.dropdown-item {
+  color: var(--mainred);
+}
+.nav-link {
+  display: inline;
+}

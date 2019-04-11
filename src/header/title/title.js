@@ -27,7 +27,7 @@ const TitleContainer = styled.div`
     text-decoration: none;
     span {
       text-transform: capitalize;
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.4rem;
       margin-top: -0.5rem
       color: var(--darkviolet);
       display: block;

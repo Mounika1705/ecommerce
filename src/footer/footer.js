@@ -2,31 +2,32 @@ import React, { Component } from 'react';
 import { Heading } from '../styled/heading';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { IconHolder } from '../styled/iconHolder';
 
 
 export default class Footer extends Component {
   render() {
     return (
       <footer className="container">
-        <div className="row d-flex">
+        <div className="row d-flex pt-5">
           <div className="col-lg-3 col-md-6 col-sm-12 pr-4 mb-3 pb-5">
             <Heading>Contact</Heading>
             <p> This book is a treatise on the theory of ethics,
               very popular during the Renaissance.
             </p>
-            <Iconholder>
+            <IconHolder>
               <i className="fa fa-map-marker"></i>
               445 Mount Eden Road,
               <span>Mount Eden, Auckland.</span>
-            </Iconholder>
-            <Iconholder>
+            </IconHolder>
+            <IconHolder>
               <i className="fa fa-envelope"></i>
               info@example.com
-            </Iconholder>
-            <Iconholder>
+            </IconHolder>
+            <IconHolder>
               <i className="fa fa-phone"></i>
               +64 022 343 4542
-            </Iconholder>
+            </IconHolder>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12 pr-4 mb-3 pb-5">
             <Heading>Information</Heading>
@@ -93,10 +94,10 @@ export default class Footer extends Component {
             <SocialIcons>
               <h4>Follow Us</h4>
               <span>
-                <Link to="/"><i className="fa fa-facebook" /></Link>
-                <Link to="/"><i className="fa fa-twitter" /></Link>
-                <Link to="/"><i className="fa fa-google-plus" /></Link>
-                <Link to="/"><i className="fa fa-instagram" /></Link>
+                <a href="/"><i className="fa fa-facebook" /></a>
+                <a href="/"><i className="fa fa-twitter" /></a>
+                <a href="/"><i className="fa fa-google-plus" /></a>
+                <a href="/"><i className="fa fa-instagram" /></a>
               </span>
             </SocialIcons>
           </div>
@@ -106,19 +107,6 @@ export default class Footer extends Component {
   }
 }
 
-const Iconholder = styled.p`
-  .fa {
-    font-size: 1rem;
-    color: var(--darkviolet);
-    padding: 0.3rem;
-    border: 1px solid var(--simpleblack);
-    margin: 0.3rem;
-  }
-  span {
-    display: block;
-    margin-left: 1.8rem;
-  }
-`
 const List = styled.ul`
   list-style-type: none;
   padding: 0;

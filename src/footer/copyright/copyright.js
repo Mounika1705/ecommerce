@@ -1,13 +1,13 @@
-import React from 'react';
+ import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+
 
 export const Copyright = () => {
   return (
     <div className="copyright">
       <PageTop>
         <div className="page-top">
-          <Link to="/"><i className="fa fa-arrow-circle-up"/></Link>
+          <a href="#top"><i className="fa fa-arrow-circle-up"/></a>
         </div>
       </PageTop>
       <div className="text-center my-4">

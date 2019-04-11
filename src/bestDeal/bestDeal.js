@@ -1,7 +1,6 @@
 import React from 'react';
 import { ProductContext } from '../context/context';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import Timer from './timer/timer';
 
 
@@ -16,12 +15,13 @@ export default () => {
     let discount = 0;
     let tempProduct = {};
     for (const key in products) {
-      products[key].forEach(product => {
+      for(const product of products[key])
+       {
         if (product.discount > discount) {
           discount = product.discount;
           tempProduct = product;
         }
-      });
+      }
     }
     return tempProduct;
   }
@@ -31,7 +31,7 @@ export default () => {
       <div className="col-lg-7 col-md-12 col-sm-12 p-0">
         <Span>{bestProduct.discount}% Discount</Span>
         <img style={imageStyle} src="img/bestdeal.jpg" alt="Best Deal"></img>
-        <Div><Link to="/">Shop Now -></Link></Div>
+        <Div><a href="/">Shop Now -></a></Div>
       </div>
       <div className="col-lg-5 col-md-12 col-sm-12 p-0">
         <TimerContainer>

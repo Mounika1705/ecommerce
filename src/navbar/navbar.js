@@ -27,9 +27,19 @@ export default class Navbar extends Component {
               <NavLink to="/about"
                 activeClassName="active" className="nav-link">About</NavLink>
             </li>
-            <li className="nav-item px-4">
-              <NavLink to="/products"
-                activeClassName="active" className="nav-link">Products</NavLink>
+            <li className="nav-item dropdown px-4">
+              <NavLink to="/products" activeClassName="active" 
+                className="nav-link">Products
+              </NavLink>
+              <a href="#" className="nav-link dropdown-toggle" id="navbardrop" 
+                data-toggle="dropdown"></a>
+              <div className="dropdown-menu text-danger">
+                <a className="dropdown-item" href="#">Mobiles</a>
+                <a className="dropdown-item" href="#">Tablets</a>
+                <a className="dropdown-item" href="#">Laptops</a>
+                <a className="dropdown-item" href="#">Wearables</a>
+                <a className="dropdown-item" href="#">Printers</a>
+              </div>
             </li>
             <li className="nav-item px-4">
               <NavLink to="/contact"
